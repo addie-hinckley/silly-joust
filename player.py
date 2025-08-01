@@ -1,4 +1,4 @@
-import pygame
+import pygame, random
 
 class Player(pygame.sprite.Sprite):
 
@@ -24,6 +24,8 @@ class Player(pygame.sprite.Sprite):
 
         self.is_moving_right = False
         self.is_moving_left = False
+        self.is_looking_right = False
+        self.is_looking_left = False
 
 
     def __str__(self):
@@ -57,9 +59,14 @@ class Player(pygame.sprite.Sprite):
     def player_jump(self):
         self.y_velocity = -6
 
+    def kill_self(self):
+        self.rect.x = random.randrange(0, 800 - self.rect.width)
+        self.rect.y = random.randrange(0, 330 - self.rect.height)
+
         
 
 
 
     
+
 
