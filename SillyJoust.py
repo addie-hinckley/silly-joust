@@ -1,4 +1,3 @@
-
 import pygame, sys, player, platform1, random
 
 
